@@ -2,6 +2,7 @@ package main
 
 import (
 	"Quotes_Server/configs"
+	"Quotes_Server/routes"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,6 +18,8 @@ func main() {
 			"message": "pong",
 		})
 	})
+
+	routes.QuoteRoute(router)
 
 	router.Run("localhost:8080")
 }
